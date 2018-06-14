@@ -37,13 +37,13 @@ public class SongAdapter extends ArrayAdapter<String>{
             }
 
             // Get the {@link Song} object located at this position in the list
-            String currentSong = getItem(position);
+            Song songName = getItem(position);
 
             // Get SONG Name
             // Find the TextView in the list_item.xml layout with the ID song_text_view
             TextView songTextView = (TextView) listItemView.findViewById(R.id.song_text_view);
             // Get the version name from the current SONG object and set this text on the name TextView
-            songTextView.setText(currentSong.getSongName());
+            songTextView.setText(songName.getSongName());
 
             // Get ARTIST Name
             // Find the TextView in the list_item.xml layout with the ID artist_text_view

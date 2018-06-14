@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         artists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create a new intent to open the {@link NumbersActivity}
+                // Create a new intent to open the {@link ArtistActivity}
                 Intent artistsIntent = new Intent(MainActivity.this, ArtistActivity.class);
 
                 // Start the new activity
@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         songs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create a new intent to open the {@link NumbersActivity}
-                Intent songsIntent = new Intent(MainActivity.this, ArtistActivity.class);
+                // Create a new intent to open the {@link SongActivity}
+                Intent songsIntent = new Intent(MainActivity.this, SongActivity.class);
 
                 // Start the new activity
                 startActivity(songsIntent);
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         nowPlaying.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create a new intent to open the {@link NumbersActivity}
-                Intent nowPlayingIntent = new Intent(MainActivity.this, ArtistActivity.class);
+                // Create a new intent to open the {@link NowPlayingActivity}
+                Intent nowPlayingIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
 
                 // Start the new activity
                 startActivity(nowPlayingIntent);

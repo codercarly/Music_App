@@ -11,12 +11,12 @@ public class SongActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_item);
+        setContentView(R.layout.song_list);
 
         // Create a list of words
         ArrayList<String> song = new ArrayList<String>();
 
-        // words.add("one");
+        // Add songs to ArrayList
         song.add(new String("Rumor Has It"));
         song.add(new String("Chasing Pavements"));
         song.add(new String("The Phoenix"));
