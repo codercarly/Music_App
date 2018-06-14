@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">The Music App</string>
+    <string name="home">Home</string>
+    <string name="artist_list">Artists</string>
+    <string name="song_list">Song List</string>
+    <string name="now_playing">Now Playing</string>
+</resources>

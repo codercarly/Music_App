@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/list_item_width"
+            android:layout_height="@dimen/list_item_height"
+            android:src="@drawable/singer_black"
+            android:background="@color/colorArtists" />
+
+        <TextView
+            android:id="@+id/artists"
+            style="@style/CategoryStyle"
+            android:background="@color/colorArtists"
+            android:text="@string/artist_list" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/list_item_width"
+            android:layout_height="@dimen/list_item_height"
+            android:src="@drawable/music_black"
+            android:background="@color/colorSongs"/>
+        <TextView
+            android:id="@+id/songs"
+            style="@style/CategoryStyle"
+            android:background="@color/colorSongs"
+            android:text="@string/song_list" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/list_item_width"
+            android:layout_height="@dimen/list_item_height"
+            android:src="@drawable/play_black"
+            android:background="@color/colorNowPlaying"/>
+        <TextView
+            android:id="@+id/now_playing"
+            style="@style/CategoryStyle"
+            android:background="@color/colorNowPlaying"
+            android:text="@string/now_playing" />
+    </LinearLayout>
+
+
+</LinearLayout>

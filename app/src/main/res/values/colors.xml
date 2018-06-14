@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary color of the app (shown in the app bar) -->
+    <color name="colorPrimary">#263238</color>
+
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="colorPrimaryDark">#455A64</color>
+
+    <!-- Background color of the app -->
+    <color name="colorBackground">#CFD8DC</color>
+
+    <!-- Background color of Artists -->
+    <color name="colorArtists">#455a64</color>
+
+    <!-- Background color of Songs -->
+    <color name="colorSongs">#607D8B</color>
+
+    <!-- Background color of Now Playing -->
+    <color name="colorNowPlaying">#90A4AE</color>
+
+    <!-- Accent color of the app -->
+    <color name="colorAccent">#009688</color>
+
+
+</resources>
