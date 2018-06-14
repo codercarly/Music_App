@@ -11,13 +11,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MusicAdapter extends ArrayAdapter<String>{
+public class SongAdapter extends ArrayAdapter<String>{
 
         /**
          * This is a custom constructor
          */
-        public MusicAdapter(Activity context, ArrayList<String> music) {
-            super(context, 0, music);
+        public SongAdapter(Activity context, ArrayList<String> song) {
+            super(context, 0, song);
         }
 
         /**
@@ -36,20 +36,20 @@ public class MusicAdapter extends ArrayAdapter<String>{
                 listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
             }
 
-            // Get the {@link Word} object located at this position in the list
-            String currentMusic = getItem(position);
+            // Get the {@link Song} object located at this position in the list
+            String currentSong = getItem(position);
 
             // Get SONG Name
             // Find the TextView in the list_item.xml layout with the ID song_text_view
             TextView songTextView = (TextView) listItemView.findViewById(R.id.song_text_view);
             // Get the version name from the current SONG object and set this text on the name TextView
-            songTextView.setText(currentMusic.getCurrentSong());
+            songTextView.setText(currentSong.getSongName());
 
             // Get ARTIST Name
             // Find the TextView in the list_item.xml layout with the ID artist_text_view
             //TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
             // Get the version name from the current ARTIST object and set this text on the name TextView
-            //artistTextView.setText(currentMusic.getCurrentArtist());
+            //artistTextView.setText(currentMusic.getArtistName());
 
             // Return the whole list item layout (containing 2 TextViews and an ImageView) so that it
             // can be shown in the ListView
