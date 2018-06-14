@@ -11,13 +11,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class SongAdapter extends ArrayAdapter<String>{
+public class SongAdapter extends ArrayAdapter<Song>{
 
         /**
          * This is a custom constructor
          */
-        public SongAdapter(Activity context, ArrayList<String> song) {
-            super(context, 0, song);
+        public SongAdapter(Activity context, ArrayList<Song> songAdapter) {
+            super(context, 0, songAdapter);
         }
 
         /**

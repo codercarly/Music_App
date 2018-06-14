@@ -14,17 +14,17 @@ public class SongActivity extends AppCompatActivity {
         setContentView(R.layout.song_list);
 
         // Create a list of words
-        ArrayList<String> song = new ArrayList<String>();
+        ArrayList<Song> song = new ArrayList<Song>();
 
         // Add songs to ArrayList
-        song.add(new String("Rumor Has It"));
-        song.add(new String("Chasing Pavements"));
-        song.add(new String("The Phoenix"));
-        song.add(new String("Stay Frosty Royal Milk Tea"));
-        song.add(new String("Welcome to the Black Parade"));
-        song.add(new String("Sing"));
-        song.add(new String("Time to Dance"));
-        song.add(new String("Victorious"));
+        song.add(new Song("Rumor Has It", "Adele"));
+        song.add(new Song("Chasing Pavements", "Adele"));
+        song.add(new Song("The Phoenix", "Fall Out Boy"));
+        song.add(new Song("Stay Frosty Royal Milk Tea", "Fall Out Boy"));
+        song.add(new Song("Welcome to the Black Parade", "My Chemical Romance"));
+        song.add(new Song("Sing", "My Chemical Romance"));
+        song.add(new Song("Time to Dance", "Panic! At The Disco"));
+        song.add(new Song("Victorious", "Panic! At The Disco"));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -32,7 +32,7 @@ public class SongActivity extends AppCompatActivity {
         // simple_list_item_1.xml layout resource defined in the Android framework.
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
-        SongAdapter adapter = new SongAdapter(this, song);
+        SongAdapter songAdapter = new SongAdapter(this, song);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -43,7 +43,7 @@ public class SongActivity extends AppCompatActivity {
         // {@link ListView} will display list items for each word in the list of words.
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
-        listView.setAdapter(adapter);
+        listView.setAdapter(songAdapter);
     }
 }
 
