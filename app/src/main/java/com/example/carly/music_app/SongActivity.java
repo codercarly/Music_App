@@ -17,14 +17,14 @@ public class SongActivity extends AppCompatActivity {
         ArrayList<Song> song = new ArrayList<Song>();
 
         // Add songs to ArrayList
-        song.add(new Song("Rumor Has It", "Adele"));
-        song.add(new Song("Chasing Pavements", "Adele"));
-        song.add(new Song("The Phoenix", "Fall Out Boy"));
-        song.add(new Song("Stay Frosty Royal Milk Tea", "Fall Out Boy"));
-        song.add(new Song("Welcome to the Black Parade", "My Chemical Romance"));
-        song.add(new Song("Sing", "My Chemical Romance"));
-        song.add(new Song("Time to Dance", "Panic! At The Disco"));
-        song.add(new Song("Victorious", "Panic! At The Disco"));
+        song.add(new Song("Rumor Has It", "Adele", R.drawable.adele_21));
+        song.add(new Song("Chasing Pavements", "Adele", R.drawable.adele_19));
+        song.add(new Song("The Phoenix", "Fall Out Boy", R.drawable.falloutboy_save));
+        song.add(new Song("Stay Frosty Royal Milk Tea", "Fall Out Boy", R.drawable.falloutboy_mania));
+        song.add(new Song("Welcome to the Black Parade", "My Chemical Romance", R.drawable.mychemicalromance_black));
+        song.add(new Song("Sing", "My Chemical Romance", R.drawable.mychemicalromance_danger));
+        song.add(new Song("Time to Dance", "Panic! At The Disco", R.drawable.panic_fever));
+        song.add(new Song("Victorious", "Panic! At The Disco", R.drawable.panic_death));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -37,7 +37,7 @@ public class SongActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // song_list file.
-        ListView listView = (ListView) findViewById(R.id.song_list);
+        ListView listView = findViewById(R.id.song_list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.

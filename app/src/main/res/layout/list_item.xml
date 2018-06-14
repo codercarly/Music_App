@@ -9,8 +9,9 @@
     android:minHeight="?android:attr/listPreferredItemHeight">
 
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:id="@+id/album_cover"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -21,6 +22,7 @@
 
         <TextView
             android:id="@+id/song_text_view"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

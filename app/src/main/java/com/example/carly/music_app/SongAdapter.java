@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -47,9 +48,15 @@ public class SongAdapter extends ArrayAdapter<Song>{
 
             // Get ARTIST Name
             // Find the TextView in the list_item.xml layout with the ID artist_text_view
-            //TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
+            TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
             // Get the version name from the current ARTIST object and set this text on the name TextView
-            //artistTextView.setText(currentMusic.getArtistName());
+            artistTextView.setText(songName.getArtistName());
+
+            // Find the ImageView in the list_item.xml layout with the ID list_item_icon
+            ImageView iconView = (ImageView) listItemView.findViewById(R.id.album_cover);
+            // Get the image resource ID from the current AndroidFlavor object and
+            // set the image to iconView
+            iconView.setImageResource(songName.getImageResourceId());
 
             // Return the whole list item layout (containing 2 TextViews and an ImageView) so that it
             // can be shown in the ListView
