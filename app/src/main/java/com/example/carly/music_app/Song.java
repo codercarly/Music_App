@@ -21,9 +21,21 @@ public class Song {
      *
      * @param songName   is the name of the song in the playlist.
      * @param artistName is the artist of the selected song.
+     * @param imageResourceId is the album artwork associate with the song.
      */
     public Song(String songName, String artistName, int imageResourceId) {
         mSongName = songName;
+        mArtistName = artistName;
+        mImageResourceId = imageResourceId;
+    }
+
+    /**
+     * Constructor - Create a new artist object
+     *
+     * @param artistName is the name of the artist.
+     * @param imageResourceId is the album cover associated with the artist.
+     */
+    public Song(String artistName, int imageResourceId) {
         mArtistName = artistName;
         mImageResourceId = imageResourceId;
     }
