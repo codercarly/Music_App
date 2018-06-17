@@ -4,4 +4,8 @@
     <string name="artist_list">Artists</string>
     <string name="song_list">Song List</string>
     <string name="now_playing">Now Playing</string>
+    <string name="fallOutBoy">Fall Out Boy</string>
+    <string name="stayFrosty">Stay Frosty Royal Milk Tea</string>
+    <string name="mania">M A N I A</string>
+    <string name="releaseYear">2018</string>
 </resources>

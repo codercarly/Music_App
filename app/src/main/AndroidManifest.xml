@@ -19,10 +19,18 @@
 
         <activity
             android:name=".SongActivity"
-            android:label="@string/song_list" />
+            android:label="@string/song_list"
+            android:parentActivityName="com.example.carly.music_app.MainActivity">
+        </activity>
         <activity
             android:name=".ArtistActivity"
-            android:label="@string/artist_list">
+            android:label="@string/artist_list"
+            android:parentActivityName="com.example.carly.music_app.MainActivity">
+        </activity>
+        <activity
+            android:name=".NowPlayingActivity"
+            android:label="@string/now_playing"
+            android:parentActivityName="com.example.carly.music_app.MainActivity">
         </activity>
     </application>
 

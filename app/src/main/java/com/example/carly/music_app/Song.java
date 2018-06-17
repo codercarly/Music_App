@@ -15,6 +15,9 @@ public class Song {
     // Album Cover Art
     private int mImageResourceId;
 
+    // Album Release Year
+    private int mReleaseYear;
+
 
     /**
      * Constructor - Create a new song object
@@ -41,6 +44,22 @@ public class Song {
     }
 
     /**
+     * Constructor - Create a now playing object
+     *
+     * @param songName
+     * @param artistName
+     * @param imageResourceId
+     * @param releaseYear
+     */
+
+    public Song (String songName, String artistName, int imageResourceId, int releaseYear) {
+        mSongName = songName;
+        mArtistName = artistName;
+        mImageResourceId = imageResourceId;
+        mReleaseYear = releaseYear;
+    }
+
+    /**
      * Get the song name
      */
     public String getSongName() {
@@ -58,5 +77,10 @@ public class Song {
      * Get the image resource id
      */
     public int getImageResourceId() { return mImageResourceId;}
+
+    /**
+     * Get the release year
+     */
+    public int getReleaseYear() { return mReleaseYear;}
 }
 

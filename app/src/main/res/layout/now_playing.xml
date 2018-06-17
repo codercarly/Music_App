@@ -14,26 +14,20 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="75dp" />
 
-    <TextView
-        android:id="@+id/song_name"
+    <EditText
+        android:id="@+id/now_playing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/artist_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp" />
 
-    <TextView
-        android:id="@+id/release_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"/>
 
 </LinearLayout>
 

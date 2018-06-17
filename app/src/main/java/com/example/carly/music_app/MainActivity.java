@@ -15,13 +15,15 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        // Find the View that shows the artists category
+        /**
+         * Find the View that shows the artists category
+         */
         TextView artists = (TextView) findViewById(R.id.artists);
-
         // Set a click listener on that view
         artists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // Create a new intent to open the {@link ArtistActivity}
                 Intent artistsIntent = new Intent(MainActivity.this, ArtistActivity.class);
 
@@ -29,14 +31,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(artistsIntent);
             }
         });
-
-        // Find the View that shows the songs category
+        /**
+         * Find the View that shows the songs category
+         */
         TextView songs = (TextView) findViewById(R.id.songs);
-
         // Set a click listener on that view
         songs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // Create a new intent to open the {@link SongActivity}
                 Intent songsIntent = new Intent(MainActivity.this, SongActivity.class);
 
@@ -44,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(songsIntent);
             }
         });
-
-        // Find the View that shows the now playing category
+        /**
+         * Find the View that shows the now playing category
+         */
         TextView nowPlaying = (TextView) findViewById(R.id.now_playing);
 
         // Set a click listener on that view
