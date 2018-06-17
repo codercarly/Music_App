@@ -17,8 +17,6 @@ public class SongActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_list);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-
 
         /*
          * Artist Button - takes user to the ArtistActivity
@@ -54,7 +52,9 @@ public class SongActivity extends AppCompatActivity {
             }
         });
 
-        // Create a list of Songs
+        /*
+         *Create an ArrayList of songs, the artist, an album image and an adapter for a ListView
+         */
         final ArrayList<Song> song = new ArrayList<Song>();
 
         // Add song name, artist name, and artist album image to list.
@@ -66,6 +66,10 @@ public class SongActivity extends AppCompatActivity {
         song.add(new Song("Sing", "My Chemical Romance", R.drawable.mychemicalromance_danger));
         song.add(new Song("Time to Dance", "Panic! At The Disco", R.drawable.panic_fever));
         song.add(new Song("Victorious", "Panic! At The Disco", R.drawable.panic_death));
+        song.add(new Song("Stiches", "Shawn Mendes", R.drawable.shawn_stiches));
+        song.add(new Song("Ain't It Fun", "Paramore", R.drawable.paramore_aint));
+        song.add(new Song("Thinking out Loud", "Ed Sheeran", R.drawable.ed_x));
+        song.add(new Song("Applause", "Lady Gaga", R.drawable.gaga_applause));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
@@ -85,21 +89,24 @@ public class SongActivity extends AppCompatActivity {
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(songAdapter);
 
-        // ListView on item selected listener.
+        /*
+         *ListView on item selected listener, extras to put into NowPlayingActivity on item click
+         */
         listView.setOnItemClickListener(new OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
                 // Getting ListView click value into String variable.
-                String TempListViewClickedValue = song[position].toString();
+                Song mySong = (Song) adapterView.getItemAtPosition(position);
 
                 Intent intent = new Intent(SongActivity.this, NowPlayingActivity.class);
 
                 // Sending value to another activity using intent.
-                intent.putExtra("ListViewClickedValue", TempListViewClickedValue);
+                intent.putExtra("artist name", mySong.getArtistName());
+                intent.putExtra("song name", mySong.getSongName());
+                intent.putExtra("image", mySong.getImageResourceId());
 
                 startActivity(intent);
-
                 }
         });
 

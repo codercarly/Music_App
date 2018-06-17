@@ -16,20 +16,17 @@ public class ArtistActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.artist_list);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         /*
          * Song Button - takes user to SongActivity
          */
-        TextView artists = findViewById(R.id.song_button);
+        TextView songs = findViewById(R.id.song_button);
         // Set a click listener on that view
-        artists.setOnClickListener(new View.OnClickListener() {
+        songs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 // Create a new intent to open the {@link ArtistActivity}
                 Intent artistsIntent = new Intent(ArtistActivity.this, SongActivity.class);
-
                 // Start the new activity
                 startActivity(artistsIntent);
             }
@@ -39,7 +36,6 @@ public class ArtistActivity extends AppCompatActivity {
          * Now Playing Button - takes user to NowPlayingActivity
          */
         TextView nowPlaying = findViewById(R.id.now_playing_button);
-
         // Set a click listener on that view
         nowPlaying.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +48,9 @@ public class ArtistActivity extends AppCompatActivity {
             }
         });
 
-        // Create a list of Artists
+        /*
+         *Create an array list of Artists & an array adapter
+         */
         ArrayList<Song> artist = new ArrayList<Song>();
 
         // Add the artist name & image
@@ -60,7 +58,10 @@ public class ArtistActivity extends AppCompatActivity {
         artist.add(new Song("Fall Out Boy", R.drawable.falloutboy_mania));
         artist.add(new Song("My Chemical Romance", R.drawable.mychemicalromance_danger));
         artist.add(new Song("Panic! At The Disco", R.drawable.panic_fever));
-
+        artist.add(new Song("Shawn Mendes", R.drawable.shawn_stiches));
+        artist.add(new Song("Paramore", R.drawable.paramore_aint));
+        artist.add(new Song("Ed Sheeran", R.drawable.ed_x));
+        artist.add(new Song("Lady Gaga", R.drawable.gaga_applause));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
