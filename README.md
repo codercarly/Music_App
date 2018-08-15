@@ -1,6 +1,8 @@
 # Music App
 The Music App is a program based off the Miwok App created in the Udacity Android Basics Nanodegree program. 
 
+<img src="https://github.com/codercarly/Music_App/blob/master/musicplayer_animated_1.gif" width="200">
+
 # Project Overview:
 - The project goal was to design the structure of a music app using intents, new activities, array lists, loops and custom classes. 
 - The music player app does not actually need to play music.
